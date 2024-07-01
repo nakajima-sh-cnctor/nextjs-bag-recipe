@@ -1,3 +1,4 @@
+import path from 'path'
 import vuetify, { transformAssetUrls } from 'vite-plugin-vuetify'
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
@@ -33,6 +34,12 @@ export default defineNuxtConfig({
         transformAssetUrls,
       },
     },
+    resolve: {
+      alias: {
+        '@': path.resolve(__dirname, './'),
+      },
+    },
+
   },
   css: [
     'vuetify/lib/styles/main.sass',
