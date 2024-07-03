@@ -13,7 +13,7 @@ setup((app) => {
 export const decorators = [
   (story: any) => ({
     components: { story },
-    template: '<v-app><story /></v-app>',
+    template: '<v-app><v-container><story /></v-container></v-app>',
   }),
 ]
 
