@@ -51,3 +51,15 @@ Storybook起動
 ```bash
 npm run storybook
 ```
+
+supabase docker　起動
+
+```bash
+npx supabase start
+```
+
+supabase docker　停止
+
+```bash
+npx supabase stop
+```
