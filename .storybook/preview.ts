@@ -13,7 +13,7 @@ setup((app) => {
 export const decorators = [
   (story: any) => ({
     components: { story },
-    template: '<v-app style="display: flex;justify-content: center;"><story /></v-app>',
+    template: '<v-container style="display: flex;justify-content: center;"><story /></v-container>',
   }),
 ]
 
