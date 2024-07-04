@@ -1,3 +1,4 @@
+import path from 'path'
 import type { StorybookConfig } from '@storybook/vue3-vite'
 
 const config: StorybookConfig = {
@@ -14,6 +15,16 @@ const config: StorybookConfig = {
   },
   docs: {
     autodocs: 'tag',
+  },
+  viteFinal(config) {
+    if (config.resolve) {
+      config.resolve.alias = {
+        ...config.resolve.alias,
+        '@': path.resolve(__dirname, '../'),
+        '~': path.resolve(__dirname, '../'),
+      }
+    }
+    return config
   },
 }
 export default config

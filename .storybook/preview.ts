@@ -2,11 +2,14 @@
 import type { Preview } from '@storybook/vue3'
 import { setup } from '@storybook/vue3'
 // Styles
+import { createPinia } from 'pinia'
 import vuetify from '../utils/vuetify'
+
+const pinia = createPinia()
 
 setup((app) => {
   if (app) {
-    app.use(vuetify)
+    app.use(vuetify).use(pinia)
   }
 })
 
